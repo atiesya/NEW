@@ -1,0 +1,121 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: #fff8fb;
+  margin: 0;
+  padding: 0;
+  color: #4a4a4a;
+}
+
+.wrapper {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.cookie-card {
+  background-color: #ffeef7;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(255, 182, 193, 0.2);
+}
+
+.product-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  color: #ff8fab;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.product-img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 138, 169, 0.3);
+}
+
+.description, .info-list, .special-section, .promo-section, .rating-box {
+  margin-top: 20px;
+}
+
+.special-section ul, .info-list, .promo-section p {
+  list-style: disc inside;
+}
+
+.form-title {
+  margin-top: 30px;
+  font-size: 1.6em;
+  color: #d63384;
+}
+
+.order-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.order-form input, .order-form select, .order-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid #ffc0cb;
+  border-radius: 8px;
+  background-color: #fff0f5;
+  font-family: inherit;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  background-color: #ff99c8;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #f368b0;
+}
+
+.popup-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff0f6;
+  border: 2px solid #ffa8c9;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+.popup-message button {
+  margin-top: 10px;
+  background-color: #ffa8c9;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back-btn-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-btn {
+  color: #ff6f91;
+  text-decoration: none;
+  font-weight: bold;
+}

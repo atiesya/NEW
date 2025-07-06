@@ -1,0 +1,19 @@
+.dropdown {
+  width: 100%; 
+}
+
+.dropdown-content {
+  display: none;
+  background-color: pink;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 12px 16px;
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.staff-card {
+  margin: 50px auto;
+  border: 5px dashed #FFD6E0;
+}
+

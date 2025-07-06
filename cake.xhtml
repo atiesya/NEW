@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Our Cake Selection</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .menu {
+      padding: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background-color: #fff0f6;
+      border: 2px solid #ffb6c1;
+      border-radius: 12px;
+      width: 220px;
+      text-align: center;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(255, 182, 193, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .emoji {
+      font-size: 1.5em;
+      margin: 8px 0;
+    }
+
+    .info {
+      display: none;
+      font-size: 0.9em;
+      color: #444;
+      margin-top: 10px;
+    }
+
+    .order-btn {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      font-size: 1.4em;
+    }
+
+    button {
+      background-color: #ffccdd;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <script type="text/javascript">
+    //<![CDATA[
+    function toggleInfo(button) {
+      var info = button.nextElementSibling;
+      if (info.style.display === "block") {
+        info.style.display = "none";
+      } else {
+        info.style.display = "block";
+      }
+    }
+    //]]>
+  </script>
+</head>
+
+<body>
+  <div class="cotton-header">
+    <h1>Our Cake Selection !</h1>
+    <p class="tagline">Cakes that melt hearts, not just mouths 🎂💕</p>
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+  </div>
+
+  <div class="navbar">
+    <ul>
+      <li>
+        <a href="aboutus.xhtml">About Us</a>
+        <ul>
+          <li><a href="faq.xhtml">FAQ</a></li>
+          <li><a href="contactus.xhtml">Contact Us</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Menu</a>
+        <ul>
+          <li><a href="cake.xhtml">Cakes</a></li>
+          <li><a href="cookiecake.xhtml">Cookies</a></li>
+          <li><a href="menudrinks.xhtml">Drinks</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Order Line</a>
+        <ul>
+          <li><a href="order.xhtml">Order Form</a></li>
+          <li><a href="feedback.xhtml">Feedback</a></li>
+        </ul>
+      </li>
+      <li><a href="joinus.xhtml">Join Us</a></li>
+    </ul>
+  </div>
+
+  <div class="menu">
+    <div class="row">
+      <div class="card">
+        <a href="lemons.xhtml"><img src="cake1.jpg" alt="Lemon Blueberry Cake" /></a>
+        <div class="emoji">🫐🍋</div>
+        <h3>Lemon Blueberry Cake</h3>
+        <p>RM10.50</p>
+        <button onclick="toggleInfo(this)">👀 Tap to see more</button>
+        <div class="info">Lemon sponge with blueberry compote &amp; cream cheese.</div>
+        <a href="order.xhtml" class="order-btn" title="Order now">🛒</a>
+      </div>
+
+      <div class="card">
+        <a href="vanil.xhtml"><img src="cake2.jpg" alt="Vanilla Cake" /></a>
+        <div class="emoji">🌼🍰</div>
+        <h3>Vanilla Cake</h3>
+        <p>RM8.80</p>
+        <button onclick="toggleInfo(this)">👀 Tap to see more</button>
+        <div class="info">Classic vanilla cake with smooth buttercream.</div>
+        <a href="order.xhtml" class="order-btn" title="Order now">🛒</a>
+      </div>
+
+      <div class="card">
+        <a href="tcc.xhtml"><img src="cake3.jpg" alt="Triple Chocolate Cake" /></a>
+        <div class="emoji">🍫🍫🍫</div>
+        <h3>Triple Chocolate Cake</h3>
+        <p>RM11.50</p>
+        <button onclick="toggleInfo(this)">👀 Tap to see more</button>
+        <div class="info">3 layers of chocolate heaven – fudgy &amp; rich!</div>
+        <a href="order.xhtml" class="order-btn" title="Order now">🛒</a>
+      </div>
+
+      <div class="card">
+        <a href="sc.xhtml"><img src="cake4.jpg" alt="Strawberry Cake" /></a>
+        <div class="emoji">🍓🎀</div>
+        <h3>Strawberry Cake</h3>
+        <p>RM12.70</p>
+        <button onclick="toggleInfo(this)">👀 Tap to see more</button>
+        <div class="info">Fluffy cake with fresh strawberries and cream.</div>
+        <a href="order.xhtml" class="order-btn" title="Order now">🛒</a>
+      </div>
+
+      <div class="card">
+        <a href="matchacake.xhtml"><img src="cake5.jpg" alt="Matcha Crepe Cake" /></a>
+        <div class="emoji">🍵🍰</div>
+        <h3>Matcha Crepe Cake</h3>
+        <p>RM15.20</p>
+        <button onclick="toggleInfo(this)">👀 Tap to see more</button>
+        <div class="info">Crepes with smooth matcha filling in every layer.</div>
+        <a href="order.xhtml" class="order-btn" title="Order now">🛒</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

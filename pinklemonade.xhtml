@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Pink Lemonade | Sweet Bloom Bakers</title>
+    <link rel="stylesheet" href="pinklemonade.css" />
+    <script src="pinklemonade.js" defer="defer"></script>
+</head>
+<body>
+
+<header class="header">
+    <a href="index.xhtml">
+        <img src="logo.png" alt="Sweet Bloom Bakers Logo" class="logo" />
+    </a>
+    <h1>Sweet Bloom Bakers</h1>
+    <p>Cotton Candy Dreams in Every Sip</p>
+</header>
+
+<main class="menu-section">
+    <h2>Pink Lemonade 🍋</h2>
+
+    <img src="pinklemonade.png" alt="Pink Lemonade" class="detail-img" />
+
+    <p class="description">
+        Our Pink Lemonade is a refreshing blend of zesty lemons with a hint of sweetness and a splash of pink. Perfect for a sunny day or whenever you need a little cheer! 🍹
+    </p>
+
+    <div class="stars">
+        <span onclick="rate(1)">&#9733;</span>
+        <span onclick="rate(2)">&#9733;</span>
+        <span onclick="rate(3)">&#9733;</span>
+        <span onclick="rate(4)">&#9733;</span>
+        <span onclick="rate(5)">&#9733;</span>
+    </div>
+
+    <div class="order-section">
+        <label for="qty">Quantity:</label>
+        <input type="number" id="qty" min="1" max="10" value="1" oninput="calculateTotal()" />
+        <p id="total">Total Price: RM5.00</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleInfo()">🍋 Ingredients &amp; Nutrition</button>
+    <div class="info-box" id="info">
+        <p><strong>Ingredients:</strong> Lemon juice, sugar, water, natural pink coloring.</p>
+        <p><strong>Calories:</strong> 150 kcal per serving</p>
+    </div>
+
+    <button class="order-btn" onclick="order()">🛒 Order Now</button>
+
+    <section class="review-section">
+        <h3>💬 Leave a Review:</h3>
+        <textarea id="review" placeholder="Write your review here..."></textarea><br />
+        <button onclick="submitReview()">Submit Review</button>
+        <div id="show-review"></div>
+    </section>
+</main>
+
+<footer class="back-button">
+    <a href="menudrinks.xhtml">⬅️ Back to Drinks Menu</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Lemon Blueberry Cake</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Quicksand:wght@400;600&amp;display=swap" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="lmc.css" type="text/css" />
+  <script type="text/javascript">
+    //<![CDATA[
+    function showThanks(evt) {
+      evt.preventDefault();
+      var msg = document.getElementById("thank-you-msg");
+      if (msg) {
+        msg.style.display = "block";
+      }
+    }
+    //]]>
+  </script>
+</head>
+
+<body>
+  <div class="cake-container">
+    <h1>Lemon Blueberry Cake</h1>
+    <img src="cake1.jpg" alt="Lemon Blueberry Cake" />
+    <p class="price">RM10.50</p>
+
+    <p class="desc">
+      <em>Our Lemon Blueberry Cake combines the zesty brightness of fresh lemon with the juicy burst of real blueberries. Each layer is a fluffy lemon sponge, filled with sweet blueberry compote and a silky lemon cream cheese frosting.</em>
+    </p>
+
+    <h3>🍰 What makes it special?</h3>
+    <ul>
+      <li>Fresh blueberries in every bite</li>
+      <li>Real lemon zest and juice used</li>
+      <li>Creamy but light lemon cheese frosting</li>
+    </ul>
+
+    <h3>📦 Size &amp; Serving</h3>
+    <p>6-inch cake – serves 4 to 6 people</p>
+
+    <h3>⚠ Allergy Info</h3>
+    <p>Contains: Eggs, Dairy, Gluten</p>
+
+    <a class="back-button" href="cake.xhtml">&#8592; Back to Menu</a>
+
+    <hr class="divider" />
+
+    <div class="testimonial">
+      <h3>💬 What Our Customers Say</h3>
+      <blockquote>
+        “Absolutely delightful! The lemon and blueberry combo is heavenly. Will definitely order again!”<br />
+        <span class="customer">&ndash; Aina from Kulim</span>
+      </blockquote>
+    </div>
+
+    <div class="promo-banner">
+      🎉 Limited Time Offer: Get 10% off your second cake! Use code <strong>YUMMY10</strong> at checkout.
+    </div>
+
+    <h3>📮 Request Recipe</h3>
+    <p class="desc">Want the secret to this cake? Fill in below and we’ll email it to you!</p>
+
+    <form class="recipe-form" action="#" onsubmit="showThanks(event)">
+      <input type="text" name="name" placeholder="Your Name" required="required" />
+      <input type="email" name="email" placeholder="Your Email" required="required" />
+      <button type="submit">Send Me the Recipe 🍰</button>
+    </form>
+
+    <p id="thank-you-msg">Thank you! The recipe is on its way to your inbox 💌</p>
+  </div>
+</body>
+</html>

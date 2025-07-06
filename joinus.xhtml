@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Join Us - Sweet Bloom Bakers</title>
+  <link rel="stylesheet" href="joinus.css" type="text/css" />
+  <script type="text/javascript">
+    function showThanks() {
+      alert("Thank you for joining us! We will get in touch with you soon.");
+      document.getElementById('orderForm').reset();
+      return false;
+    }
+  </script>
+</head>
+<body>
+
+<div class="navbar">
+  <ul>
+    <li>
+      <a href="aboutus.xhtml">About Us</a>
+      <ul>
+        <li><a href="faq.xhtml">FAQ</a></li>
+        <li><a href="contactus.xhtml">Contact Us</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Menu</a>
+      <ul>
+        <li><a href="cake.xhtml">Cakes</a></li>
+        <li><a href="cookiecake.xhtml">Cookies</a></li>
+        <li><a href="menudrinks.xhtml">Drinks</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Order Line</a>
+      <ul>
+        <li><a href="order.xhtml">Order Form</a></li>
+        <li><a href="feedback.xhtml">Feedback</a></li>
+      </ul>
+    </li>
+    <li><a href="joinus.xhtml">Join Us</a></li>
+  </ul>
+</div>
+
+<div class="banner-image">
+  <img src="b2.png" alt="Sweet Bloom Bakers" />
+</div>
+
+<h1>Join the Sweet Bloom Family</h1>
+
+<form id="orderForm" action="mailto:2023803236@student.uitm.edu.my" method="post" enctype="text/plain" onsubmit="showThanks(); return false;">
+  <label for="fullname">Full Name:</label>
+  <input type="text" id="fullname" name="fullname" required="required" />
+
+  <label for="email">Email Address:</label>
+  <input type="email" id="email" name="email" required="required" />
+
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" required="required" />
+
+  <label for="role">Preferred Role:</label>
+  <select id="role" name="role" required="required">
+    <option value="">--Select Role--</option>
+    <option value="baker">Baker</option>
+    <option value="cashier">Cashier</option>
+    <option value="delivery">Delivery Staff</option>
+    <option value="customer-service">Customer Service</option>
+    <option value="marketing">Marketing &amp; Social Media</option>
+  </select>
+
+  <label for="experience">Tell us about your experience or why you want to join:</label>
+  <textarea id="experience" name="experience" rows="5" required="required"></textarea>
+
+  <label for="cv">Upload Your CV (optional):</label>
+  <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" />
+
+  <div class="form-buttons">
+    <input type="reset" value="Reset" />
+    <input type="submit" value="Submit Application" />
+  </div>
+</form>
+
+</body>
+</html>

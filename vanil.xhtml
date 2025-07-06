@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Vanilla Cake</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Quicksand:wght@400;600&amp;display=swap" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="lmc.css" type="text/css" />
+  <script type="text/javascript">
+    //<![CDATA[
+    function showThanks(evt) {
+      if (evt.preventDefault) {
+        evt.preventDefault();
+      } else {
+        evt.returnValue = false;
+      }
+      var msg = document.getElementById("thank-you-msg");
+      if (msg) {
+        msg.style.display = "block";
+      }
+      return false;
+    }
+    //]]>
+  </script>
+</head>
+<body>
+  <div class="cake-container">
+    <h1>Vanilla Cake</h1>
+    <img src="cake2.jpg" alt="Vanilla Cake" />
+    <p class="price">RM8.80</p>
+
+    <p class="desc">
+      <em>A timeless classic! Our Vanilla Cake features soft, fluffy vanilla sponge layers frosted with smooth vanilla buttercream. Simple, elegant, and absolutely delicious.</em>
+    </p>
+
+    <h3>🍰 What makes it special?</h3>
+    <ul>
+      <li>Homemade vanilla extract for a rich, authentic aroma</li>
+      <li>Extra fluffy texture with whipped cream layers</li>
+      <li>Decorated with delicate white chocolate shavings</li>
+    </ul>
+
+    <h3>📦 Size &amp; Serving</h3>
+    <p>Available in 6-inch (serves 4–6) and 8-inch (serves 8–10) options</p>
+
+    <h3>⚠ Allergy Info</h3>
+    <p>Contains: Eggs, Milk, Wheat, May contain traces of nuts</p>
+
+    <a class="back-button" href="cake.xhtml">&#8592; Back to Menu</a>
+
+    <hr class="divider" />
+
+    <div class="testimonial">
+      <h3>💬 What Our Customers Say</h3>
+      <blockquote>
+        &#8220;The best vanilla cake I&#8217;ve ever had! Not too sweet, just perfect with a cup of tea.&#8221;<br />
+        <span class="customer">&#8211; Farah from Pendang</span>
+      </blockquote>
+    </div>
+
+    <div class="promo-banner">
+      &#127881; Limited Time Offer: Buy 2, Get 1 Mini Vanilla Cupcake Free! Use code <strong>VANILLAJOY</strong> at checkout.
+    </div>
+
+    <h3>📮 Request Recipe</h3>
+    <p class="desc">Craving to recreate it at home? Request the recipe below and we’ll send it via email.</p>
+
+    <form class="recipe-form" action="#" onsubmit="return showThanks(event);">
+      <input type="text" name="name" placeholder="Your Name" required="required" />
+      <input type="email" name="email" placeholder="Your Email" required="required" />
+      <button type="submit">Send Me the Recipe 🍰</button>
+    </form>
+
+    <p id="thank-you-msg" style="display: none;">Thank you! The recipe is on its way to your inbox 💌</p>
+  </div>
+</body>
+</html>

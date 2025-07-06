@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Green Tea Latte | Sweet Bloom Bakers</title>
+    <link rel="stylesheet" href="greentealatte.css" />
+    <script src="greentealatte.js" defer="defer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Quicksand:wght@500&amp;display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header class="header">
+    <a href="index.xhtml">
+        <img src="logo.png" alt="Sweet Bloom Bakers Logo" class="logo" />
+    </a>
+    <h1>Sweet Bloom Bakers</h1>
+    <p>Cotton Candy Dreams in Every Sip</p>
+</header>
+
+<main class="menu-section">
+    <h2>Green Tea Latte 🍵</h2>
+
+    <img src="greentealatte.jpg" alt="Green Tea Latte" class="detail-img" />
+
+    <p class="description">
+        Smooth and creamy matcha green tea blended with milk, offering a calming, earthy flavor that's both refreshing and comforting. 🍃
+    </p>
+
+    <div class="stars">
+        <span onclick="rate(1)">&#9733;</span>
+        <span onclick="rate(2)">&#9733;</span>
+        <span onclick="rate(3)">&#9733;</span>
+        <span onclick="rate(4)">&#9733;</span>
+        <span onclick="rate(5)">&#9733;</span>
+    </div>
+
+    <div class="order-section">
+        <label for="qty">Quantity:</label>
+        <input type="number" id="qty" min="1" max="10" value="1" oninput="calculateTotal()" />
+        <p id="total">Total Price: RM7.00</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleInfo()">🍵 Ingredients &amp; Nutrition</button>
+    <div class="info-box" id="info">
+        <p><strong>Ingredients:</strong> Matcha powder, steamed milk, vanilla syrup, sugar (optional).</p>
+        <p><strong>Calories:</strong> 180 kcal per serving</p>
+    </div>
+
+    <button class="order-btn" onclick="order()">🛒 Order Now</button>
+
+    <section class="review-section">
+        <h3>💬 Leave a Review:</h3>
+        <textarea id="review" placeholder="Write your review here..."></textarea><br />
+        <button onclick="submitReview()">Submit Review</button>
+        <div id="show-review"></div>
+    </section>
+</main>
+
+<footer class="back-button">
+    <a href="menudrinks.xhtml">⬅️ Back to Drinks Menu</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Feedback - Sweet Bloom Bakers</title>
+  <link rel="stylesheet" href="joinus.css" type="text/css" />
+  <style type="text/css">
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ffe4e1, #fff0f5);
+      margin: 0;
+      padding: 30px;
+      color: #3e2723;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      color: #5D4037;
+      margin-bottom: 20px;
+    }
+
+    .marquee-wrapper {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .review-container {
+      display: inline-flex;
+      animation: scroll-left 20s linear infinite;
+      gap: 20px;
+      padding-bottom: 20px;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .review-box {
+      background-color: #FFF8E1;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 200px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #FFF8E1;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #BCAAA4;
+      box-sizing: border-box;
+    }
+
+    .rating-group {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .rating-question {
+      margin-top: 10px;
+    }
+
+    .rating-options {
+      display: flex;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .form-buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    input[type="submit"], input[type="reset"] {
+      padding: 10px 20px;
+      background-color: #8D6E63;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 5px;
+    }
+  </style>
+
+  <script type="text/javascript">
+  //<![CDATA[
+    function showRatings() {
+      var type = document.getElementById("feedback-type").value;
+      var groups = document.getElementsByClassName("rating-group");
+      for (var i = 0; i < groups.length; i++) {
+        groups[i].style.display = "none";
+      }
+      if (type) {
+        var target = document.getElementById(type + "-ratings");
+        if (target) {
+          target.style.display = "block";
+        }
+      }
+    }
+
+    function showThanks() {
+      alert("Thank you for your feedback!");
+    }
+  //]]>
+  </script>
+</head>
+<body>
+
+<div class="navbar">
+  <ul>
+    <li>
+      <a href="aboutus.xhtml">About Us</a>
+      <ul>
+        <li><a href="faq.xhtml">FAQ</a></li>
+        <li><a href="contactus.xhtml">Contact Us</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Menu</a>
+      <ul>
+        <li><a href="cake.xhtml">Cakes</a></li>
+        <li><a href="cookiecake.xhtml">Cookies</a></li>
+        <li><a href="menudrinks.xhtml">Drinks</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Order Line</a>
+      <ul>
+        <li><a href="order.xhtml">Order Form</a></li>
+        <li><a href="feedback.xhtml">Feedback</a></li>
+      </ul>
+    </li>
+    <li><a href="joinus.xhtml">Join Us</a></li>
+  </ul>
+</div>
+
+
+
+  <h1>&#128172; Customer Feedback</h1>
+
+  <div class="marquee-wrapper">
+    <div class="review-container">
+      <div class="review-box">
+        <strong>Aisyah</strong><br />
+        Matcha Crepe Cake<br />
+        "Very soft and fresh!"
+      </div>
+      <div class="review-box">
+        <strong>Fatin</strong><br />
+        Red Velvet Cookies<br />
+        "Perfectly sweet and crunchy!"
+      </div>
+      <div class="review-box">
+        <strong>Daniel</strong><br />
+        Spanish Latte<br />
+        "The portion is quite big."
+      </div>
+      <div class="review-box">
+        <strong>Ali</strong><br />
+        Peanut Butter Oat Cookies<br />
+        "Healthy and yummy!"
+      </div>
+      <div class="review-box">
+        <strong>Nora</strong><br />
+        Triple Chocolate Cake<br />
+        "Heavenly! Totally worth it."
+      </div>
+    </div>
+  </div>
+
+  <form id="orderForm" action="mailto:2023803236@student.uitm.edu.my" method="post" enctype="text/plain" onsubmit="showThanks(); return false;">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required="required" />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required="required" />
+
+    <label for="feedback-type">Feedback Type:</label>
+    <select id="feedback-type" name="feedback-type" onchange="showRatings()" required="required">
+      <option value="">--Select--</option>
+      <option value="product">Product Quality</option>
+      <option value="service">Customer Services</option>
+      <option value="website">Website Experience</option>
+    </select>
+
+    <div id="product-ratings" class="rating-group">
+      <label>Product Quality:</label>
+      <div class="rating-question">Taste:
+        <div class="rating-options">
+          <label><input type="radio" name="taste" value="1" />⭐</label>
+          <label><input type="radio" name="taste" value="2" />⭐⭐</label>
+          <label><input type="radio" name="taste" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="taste" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="taste" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+
+      <div class="rating-question">Cleanliness:
+        <div class="rating-options">
+          <label><input type="radio" name="cleanliness" value="1" />⭐</label>
+          <label><input type="radio" name="cleanliness" value="2" />⭐⭐</label>
+          <label><input type="radio" name="cleanliness" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="cleanliness" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="cleanliness" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+
+      <div class="rating-question">Packaging:
+        <div class="rating-options">
+          <label><input type="radio" name="packaging" value="1" />⭐</label>
+          <label><input type="radio" name="packaging" value="2" />⭐⭐</label>
+          <label><input type="radio" name="packaging" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="packaging" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="packaging" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+
+      <div class="rating-question">Freshness:
+        <div class="rating-options">
+          <label><input type="radio" name="freshness" value="1" />⭐</label>
+          <label><input type="radio" name="freshness" value="2" />⭐⭐</label>
+          <label><input type="radio" name="freshness" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="freshness" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="freshness" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+
+      <div class="rating-question">Portion Size:
+        <div class="rating-options">
+          <label><input type="radio" name="portion" value="1" />⭐</label>
+          <label><input type="radio" name="portion" value="2" />⭐⭐</label>
+          <label><input type="radio" name="portion" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="portion" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="portion" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+    </div>
+
+    <div id="service-ratings" class="rating-group">
+      <label>Customer Services:</label>
+      <div class="rating-question">Response Time:
+        <div class="rating-options">
+          <label><input type="radio" name="response" value="1" />⭐</label>
+          <label><input type="radio" name="response" value="2" />⭐⭐</label>
+          <label><input type="radio" name="response" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="response" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="response" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+
+      <div class="rating-question">Friendliness:
+        <div class="rating-options">
+          <label><input type="radio" name="friend" value="1" />⭐</label>
+          <label><input type="radio" name="friend" value="2" />⭐⭐</label>
+          <label><input type="radio" name="friend" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="friend" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="friend" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+
+      <div class="rating-question">Problem Solving:
+        <div class="rating-options">
+          <label><input type="radio" name="solve" value="1" />⭐</label>
+          <label><input type="radio" name="solve" value="2" />⭐⭐</label>
+          <label><input type="radio" name="solve" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="solve" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="solve" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+
+      <div class="rating-question">Clear Information:
+        <div class="rating-options">
+          <label><input type="radio" name="info" value="1" />⭐</label>
+          <label><input type="radio" name="info" value="2" />⭐⭐</label>
+          <label><input type="radio" name="info" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="info" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="info" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+
+      <div class="rating-question">Delivery Punctuality:
+        <div class="rating-options">
+          <label><input type="radio" name="delivery" value="1" />⭐</label>
+          <label><input type="radio" name="delivery" value="2" />⭐⭐</label>
+          <label><input type="radio" name="delivery" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="delivery" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="delivery" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+    </div>
+
+    <div id="website-ratings" class="rating-group">
+      <label>Website Experience:</label>
+      <div class="rating-question">Ease of Use:
+        <div class="rating-options">
+          <label><input type="radio" name="ease" value="1" />⭐</label>
+          <label><input type="radio" name="ease" value="2" />⭐⭐</label>
+          <label><input type="radio" name="ease" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="ease" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="ease" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+
+      <div class="rating-question">Attractive Design:
+        <div class="rating-options">
+          <label><input type="radio" name="design" value="1" />⭐</label>
+          <label><input type="radio" name="design" value="2" />⭐⭐</label>
+          <label><input type="radio" name="design" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="design" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="design" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+
+      <div class="rating-question">Clean Order Form:
+        <div class="rating-options">
+          <label><input type="radio" name="form" value="1" />⭐</label>
+          <label><input type="radio" name="form" value="2" />⭐⭐</label>
+          <label><input type="radio" name="form" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="form" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="form" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+
+      <div class="rating-question">Smooth Functionality:
+        <div class="rating-options">
+          <label><input type="radio" name="function" value="1" />⭐</label>
+          <label><input type="radio" name="function" value="2" />⭐⭐</label>
+          <label><input type="radio" name="function" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="function" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="function" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+
+      <div class="rating-question">Fast-Loading:
+        <div class="rating-options">
+          <label><input type="radio" name="loading" value="1" />⭐</label>
+          <label><input type="radio" name="loading" value="2" />⭐⭐</label>
+          <label><input type="radio" name="loading" value="3" />⭐⭐⭐</label>
+          <label><input type="radio" name="loading" value="4" />⭐⭐⭐⭐</label>
+          <label><input type="radio" name="loading" value="5" />⭐⭐⭐⭐⭐</label>
+        </div>
+      </div>
+    </div>
+
+    <label for="comment">Additional Comments:</label>
+    <textarea id="comment" name="comment" rows="4"></textarea>
+
+    <div class="form-buttons">
+      <input type="reset" value="Reset Feedback" />
+      <input type="submit" value="Submit Feedback" />
+    </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Matcha Crepe Cake</title>
+
+  <link rel="stylesheet" href="lmc.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Quicksand:wght@400;600&amp;display=swap" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript">
+    //<![CDATA[
+    function showThanks(event) {
+      if (event.preventDefault) {
+        event.preventDefault();
+      } else {
+        event.returnValue = false;
+      }
+      var msg = document.getElementById("thank-you-msg");
+      if (msg) {
+        msg.style.display = "block";
+      }
+      return false;
+    }
+    //]]>
+  </script>
+</head>
+<body>
+  <div class="cake-container">
+    <h1>Matcha Crepe Cake 🍵🍰</h1>
+    <a href="cakes.html">
+      <img src="cake5.jpg" alt="Matcha Crepe Cake" />
+    </a>
+    <p class="price">RM12.00</p>
+
+    <p class="desc">
+      <em>Earthy, elegant, and delicate! Our Matcha Crepe Cake is made with layers of thin matcha crepes and creamy matcha filling – a treat for green tea lovers.</em>
+    </p>
+
+    <h3>🍰 What makes it special?</h3>
+    <ul>
+      <li>15+ layers of soft handmade crepes</li>
+      <li>Premium Japanese matcha powder</li>
+      <li>Light matcha-infused cream between layers</li>
+      <li>Elegant presentation with a dusting of matcha on top</li>
+    </ul>
+
+    <h3>📦 Size &amp; Serving</h3>
+    <p>Mini size – serves 1 to 2 people</p>
+
+    <h3>⚠ Allergy Info</h3>
+    <p>Contains: Eggs, Dairy (Milk), Wheat (Gluten), Matcha (Green Tea).</p>
+
+    <a class="back-button" href="cake.xhtml">&#8592; Back to Menu</a>
+
+    <hr class="divider" />
+
+    <div class="testimonial">
+      <h3>💬 What Our Customers Say</h3>
+      <blockquote>
+        “Smooth, not too sweet – just the right matcha flavour. My go-to dessert after meals!”<br />
+        <span class="customer">– Aisyah from Kuala Muda</span>
+      </blockquote>
+    </div>
+
+    <div class="promo-banner">
+      🍵 Matcha Madness: Buy 2 Matcha Crepe Cakes &amp; get 10% OFF! Use code <strong>MATCHALOVE</strong>
+    </div>
+
+    <h3>📮 Request Recipe</h3>
+    <p class="desc">Love it and want to make it? Fill in your details below and receive the recipe in your inbox.</p>
+
+    <form class="recipe-form" action="#" onsubmit="return showThanks(event);">
+      <input type="text" name="name" placeholder="Your Name" required="required" />
+      <input type="email" name="email" placeholder="Your Email" required="required" />
+      <button type="submit">Send Me the Recipe 🍵</button>
+    </form>
+
+    <p id="thank-you-msg" style="display: none;">Thank you! The recipe is on its way to your inbox 💌</p>
+  </div>
+</body>
+</html>

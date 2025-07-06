@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Sweet Bloom Bakers - Order</title>
+  <link rel="stylesheet" type="text/css" href="syerrah.css" />
+  <style type="text/css">
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ffe4e1, #fff0f5);
+      margin: 0;
+      padding: 30px;
+      color: #3e2723;
+    }
+    form {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #FFF8E1;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #5D4037;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #BCAAA4;
+      background-color: #FFF;
+      box-sizing: border-box;
+    }
+    .section-toggle {
+      margin-top: 10px;
+    }
+    .menu-section {
+      display: none;
+      background-color: #FBE9E7;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    .total-box {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .btns {
+      margin-top: 20px;
+    }
+    .btns input {
+      padding: 10px 20px;
+      background-color: #8D6E63;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .footer-link {
+      text-align: center;
+      margin-top: 25px;
+    }
+    .footer-link a {
+      color: #6D4C41;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+  <script type="text/javascript">
+  //<![CDATA[
+    function toggleSection(id) {
+      var section = document.getElementById(id);
+      if (section.style.display === "block") {
+        section.style.display = "none";
+      } else {
+        section.style.display = "block";
+      }
+    }
+    function calculateTotal() {
+      var prices = {
+        'cake_lemon': 10.50,
+        'cake_vanilla': 8.80,
+        'cake_triple': 11.50,
+        'cake_strawberry': 12.70,
+        'cake_matcha': 15.20,
+        'cookie_seasalt': 9.50,
+        'cookie_redvelvet': 6.50,
+        'cookie_peanut': 5.80,
+        'cookie_whitechoc': 7.20,
+        'cookie_sprinkle': 5.50,
+        'drink_french': 8.00,
+        'drink_butterscotch': 9.00,
+        'drink_green': 7.00,
+        'drink_spanish': 8.00,
+        'drink_pink': 5.00,
+        'milk_oat': 1.50,
+        'milk_almond': 1.80,
+        'milk_lactose': 2.00
+      };
+      var total = 0.0;
+      for (var key in prices) {
+        var input = document.getElementsByName(key)[0];
+        if (input && input.type === "number") {
+          var quantity = parseInt(input.value, 10);
+          if (!isNaN(quantity) && quantity > 0) {
+            total += prices[key] * quantity;
+          }
+        }
+      }
+      var milk = document.getElementsByName("milk")[0];
+      if (milk && milk.value !== "") {
+        total += prices['milk_' + milk.value] || 0;
+      }
+      document.getElementById("total").innerHTML = total.toFixed(2);
+    }
+    function showThanks() {
+      alert("Yay! Your order is in the oven! 🎉 Thank you for choosing Sweet Bloom Bakers – we can’t wait to sweeten your day!");
+    }
+    window.onload = function() {
+      var inputs = document.getElementsByTagName("input");
+      for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].type === "number") {
+          inputs[i].addEventListener("input", calculateTotal);
+        }
+      }
+      var selects = document.getElementsByTagName("select");
+      for (var j = 0; j < selects.length; j++) {
+        selects[j].addEventListener("change", calculateTotal);
+document.querySelectorAll('input[name="payment"]').forEach(function(el) {
+  el.addEventListener('change', function() {
+    var bankSelect = document.getElementById('bank-selection');
+    if (this.value === 'online') {
+      bankSelect.style.display = 'block';
+    } else {
+      bankSelect.style.display = 'none';
+    }
+  });
+});
+
+document.getElementById('bank').addEventListener('change', function() {
+  var selected = this.value;
+  var bankUrls = {
+    'maybank': 'https://www.maybank2u.com.my/',
+    'cimb': 'https://www.cimbclicks.com.my/',
+    'rhb': 'https://www.rhbgroup.com/',
+    'publicbank': 'https://www.pbebank.com/',
+    'bankislam': 'https://www.bankislam.biz/'
+  };
+  if (bankUrls[selected]) {
+    window.open(bankUrls[selected], '_blank');
+  }
+});
+
+      }
+    }
+  //]]>
+  </script>
+</head>
+<body>
+
+<div class="navbar">
+  <ul>
+    <li>
+      <a href="aboutus.xhtml">About Us</a>
+      <ul>
+        <li><a href="faq.xhtml">FAQ</a></li>
+        <li><a href="contactus.xhtml">Contact Us</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Menu</a>
+      <ul>
+        <li><a href="cake.xhtml">Cakes</a></li>
+        <li><a href="cookiecake.xhtml">Cookies</a></li>
+        <li><a href="menudrinks.xhtml">Drinks</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Order Line</a>
+      <ul>
+        <li><a href="order.xhtml">Order Form</a></li>
+        <li><a href="feedback.xhtml">Feedback</a></li>
+      </ul>
+    </li>
+    <li><a href="joinus.xhtml">Join Us</a></li>
+  </ul>
+</div>
+
+  <h1><img src="b1.png" alt="Sweet Bloom Bakers" style="max-width: 70%; border-radius: 12px;" /></h1>
+
+  <form action="mailto2023803236@student.uitm.edu.my" method="post" onsubmit="showThanks(); return false;">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required="required" />
+
+    <label for="address">Delivery Address:</label>
+    <textarea id="address" name="address" rows="2" required="required"></textarea>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required="required" />
+
+    <label>Cakes 🍰</label>
+    <div class="section-toggle">
+      <input type="checkbox" onclick="toggleSection('cakes')" /> 
+    </div>
+    <div id="cakes" class="menu-section">
+      <label>Lemon Blueberry Cake - RM10.50 <input type="number" name="cake_lemon" min="0" /></label>
+      <label>Vanilla Cake - RM8.80 <input type="number" name="cake_vanilla" min="0" /></label>
+      <label>Triple Chocolate Cake - RM11.50 <input type="number" name="cake_triple" min="0" /></label>
+      <label>Strawberry Cake - RM12.70 <input type="number" name="cake_strawberry" min="0" /></label>
+      <label>Matcha Crepe Cake - RM15.20 <input type="number" name="cake_matcha" min="0" /></label>
+    </div>
+
+    <label>Cookies 🍪</label>
+    <div class="section-toggle">
+      <input type="checkbox" onclick="toggleSection('cookies')" /> 
+    </div>
+    <div id="cookies" class="menu-section">
+      <label>Sea Salt Cookies - RM9.50 <input type="number" name="cookie_seasalt" min="0" /></label>
+      <label>Red Velvet Cookies - RM6.50 <input type="number" name="cookie_redvelvet" min="0" /></label>
+      <label>Peanut Butter Oat - RM5.80 <input type="number" name="cookie_peanut" min="0" /></label>
+      <label>White Choc Macadamia - RM7.20 <input type="number" name="cookie_whitechoc" min="0" /></label>
+      <label>Sprinkle Sugar Cookies - RM5.50 <input type="number" name="cookie_sprinkle" min="0" /></label>
+    </div>
+
+    <label>Drinks 🧃</label>
+    <div class="section-toggle">
+      <input type="checkbox" onclick="toggleSection('drinks')" /> 
+    </div>
+
+    <div id="drinks" class="menu-section">
+      <label>French Vanilla Choco - RM8 <input type="number" name="drink_french" min="0" /></label>
+      <label>Butterscotch - RM9 <input type="number" name="drink_butterscotch" min="0" /></label>
+      <label>Green Tea Latte - RM7 <input type="number" name="drink_green" min="0" /></label>
+      <label>Spanish Latte - RM8 <input type="number" name="drink_spanish" min="0" /></label>
+      <label>Pink Lemonade - RM5 <input type="number" name="drink_pink" min="0" /></label>
+
+      <label>Milk Option (Coffee only):</label>
+      <select name="milk">
+        <option value="">--Select--</option>
+        <option value="oat">Oat Milk</option>
+        <option value="almond">Almond Milk</option>
+        <option value="lactose">Lactose Free</option>
+      </select>
+
+      <label>Sugar Level:</label>
+      <select name="sugar">
+        <option value="normal">Normal</option>
+        <option value="less">Less</option>
+        <option value="extra">Extra</option>
+      </select>
+    </div>
+
+    <label for="note">Additional Notes:</label>
+    <textarea id="note" name="note" rows="3"></textarea>
+
+    <label>Payment Method:</label>
+    <label><input type="radio" name="payment" value="cod" required="required" /> Cash on Delivery</label>
+    <label><input type="radio" name="payment" value="online" /> Online Banking</label>
+    
+<div id="bank-selection" style="display:none;">
+  <label for="bank">Select Your Bank:</label>
+  <select id="bank" name="bank">
+    <option value="">--Choose Bank--</option>
+    <option value="maybank">Maybank2u</option>
+    <option value="cimb">CIMB Bank</option>
+    <option value="rhb">RHB Now</option>
+    <option value="bankislam">Bank Islam</option>
+  </select>
+</div>
+
+    <div class="total-box">
+      Total Price: RM <span id="total"></span>
+    </div>
+
+    <div class="btns">
+      <input type="reset" value="Reset Form" />
+      <input type="submit" value="Place Order" />
+    </div>
+
+    <div class="footer-link">
+      💌 <a href="feedback.html">Click here to leave feedback</a>
+    </div>
+  </form>
+
+</body>
+</html>

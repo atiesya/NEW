@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>Peanut Butter Oat Pre-Order</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Quicksand:wght@400;600&amp;display=swap" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="kiestyle.css" type="text/css" />
+  <script type="text/javascript">
+//<![CDATA[
+function showPopup() {
+  document.getElementById('popup').style.display = 'block';
+}
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+//]]>
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="cookie-card">
+      <h1 class="product-title">Peanut Butter Oat 🍪🥜</h1>
+
+      <div class="image-container">
+        <img src="kies2.jpg" alt="Peanut Butter Oat Cookies" class="product-img" />
+      </div>
+
+      <p class="description">
+        Wholesome cookies made with creamy peanut butter, hearty oats, and a touch of brown sugar. Perfect for breakfast, snack time, or any moment of indulgence! 🌾🍯
+      </p>
+
+      <ul class="info-list">
+        <li><strong>Price &amp; Quantity:</strong> RM7.00 (3 pcs) | RM11.00 (6 pcs) | RM16.00 (10 pcs)</li>
+        <li><strong>Combo Offer:</strong> Buy any 3 packs for RM18 🎁</li>
+        <li><strong>Allergy Info:</strong> Contains peanuts, wheat, eggs. May contain traces of milk.</li>
+      </ul>
+
+      <div class="special-section">
+        <h2>✨ What Makes This Cookie Special?</h2>
+        <ul>
+          <li>Made with real peanut butter and rolled oats</li>
+          <li>No refined sugar — only brown sugar and honey</li>
+          <li>Soft-baked and chewy, with nutty crunch</li>
+        </ul>
+      </div>
+
+      <div class="promo-section">
+        <h2>🔥 Promo Code</h2>
+        <p><strong>Use code <code>OATY15</code> for 15% OFF!</strong> (Valid: 1–7 July)</p>
+      </div>
+
+      <div class="rating-box">
+        <strong>⭐ 4.7/5.0</strong> from 142 cookie fans <br />
+        <em>"Feels like a hug in a cookie! Filling and delicious." – Farah 💬</em>
+      </div>
+
+      <h2 class="form-title">🎀 Pre-Order Form</h2>
+
+      <form onsubmit="showPopup(); return false;" class="order-form" action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required="required" />
+
+        <label for="phone">Contact Number:</label>
+        <input type="tel" id="phone" name="phone" required="required" />
+
+        <label for="event">Event Type:</label>
+        <select id="event" name="event">
+          <option value="Birthday">Birthday</option>
+          <option value="Wedding">Wedding</option>
+          <option value="Corporate">Corporate</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required="required" />
+
+        <label for="pickup">Pickup / Delivery:</label>
+        <select id="pickup" name="pickup">
+          <option value="Pickup">Pickup</option>
+          <option value="Delivery">Delivery</option>
+        </select>
+
+        <label for="date">Date Needed:</label>
+        <input type="date" id="date" name="date" required="required" />
+
+        <label for="message">Special Request:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit" class="submit-btn">Submit Pre-Order 💌</button>
+      </form>
+
+      <div id="popup" style="display: none;" class="popup-message">
+        <p>✅ Thank you! We've received your pre-order. We'll get in touch with you shortly 💖</p>
+        <button type="button" onclick="closePopup()">Close</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="back-btn-container">
+    <a href="cookiecake.xhtml" class="back-btn">&#8592; Back to Home</a>
+  </div>
+</body>
+</html>
